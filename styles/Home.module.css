@@ -1,0 +1,107 @@
+.showcase {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 20px;
+	color: #fff;
+}
+
+.video_container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #3a4052 url('../public/cover.png') no-repeat center center/cover;
+}
+
+.video_container video {
+	min-width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video_container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.content {
+	z-index: 10;
+}
+
+.content h1 {
+	color: #FFB000;
+	font-weight: bold;
+	font-family: 'Staatliches', cursive;
+}
+
+.written_and {
+	font-size: 55px;
+}
+
+.directed_by {
+	font-size: 55px;
+}
+
+.quentin {
+	font-size: 75px;
+}
+
+.tarantino {
+	font-size: 75px;
+}
+
+.content button {
+	color: #FFB000;
+	background: transparent;
+	border: none;
+	font-size: 25px;
+	border-radius: 60%;
+	transition: 0.3s;
+}
+
+.content button:hover {
+	color: #fff;
+	background: #000;
+	font-size: 30px;
+	padding: 5px 10px;
+}
+
+.about {
+	padding: 40px;
+	text-align: center;
+}
+
+.about p {
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: auto;
+}
+
+.about h2 {
+	margin: 30px 0;
+	color: var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+	.content h1 {
+		width: 100%;
+		font-size: 55px;
+	}
+}
