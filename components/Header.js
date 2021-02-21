@@ -28,9 +28,8 @@ const Header = () => {
         <div className={styles.inner_width}>
           <Link href="/">QTM</Link>
           <div className={styles.navbar_menu}>
-            <Link href="#">Home</Link>
-            <Link href="#">Movies</Link>
-            <Link href="#">Stars</Link>
+            <Link href="/movies">Movies</Link>
+            <Link href="/stars">Stars</Link>
           </div>
         </div>
       </Container>

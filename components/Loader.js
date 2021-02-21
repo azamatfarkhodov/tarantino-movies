@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <div className={styles.spinner}>
       <img
-        src="./giphy.gif"
+        src="https://res.cloudinary.com/dzo9spu3l/image/upload/v1613847108/giphy_o5awfq.gif"
         alt="loading"
       />
     </div>

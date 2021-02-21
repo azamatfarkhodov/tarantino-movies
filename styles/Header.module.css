@@ -33,7 +33,7 @@
 }
 
 .navbar_active {
-	background-color: #fff;
+	background-color: #3B3B3B;
 	position: fixed;
 	width: 100%;
 	padding: 18px 0;
@@ -48,13 +48,13 @@
 }
 
 .navbar_active .inner_width a {
-	color: #000;
+	color: #fff;
 	font-size: 35px;
 	text-decoration: none;
 }
 
 .navbar_active .navbar_menu a {
-	color: #000;
+	color: #fff;
 	font-size: 20px;
 	font-weight: 500;
 	margin-left: 30px;
