@@ -121,7 +121,7 @@ export default function Home({ movies, actors }) {
                       <Button variant="dark">Movies</Button>
                     </Link>
                     <Link href="/stars">
-                      <Button variant="dark">Collaborators</Button>
+                      <Button variant="dark">Collaborations</Button>
                     </Link>
                   </Col>
                 </Row>
@@ -229,7 +229,7 @@ export default function Home({ movies, actors }) {
                 </Row>
               </Container>
               <div className="text-center">
-                <Link href="/actors">
+                <Link href="/stars">
                   <Button variant="dark">More</Button>
                 </Link>
               </div>
