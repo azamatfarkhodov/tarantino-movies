@@ -1,11 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import axios from "axios";
 import styles from "../styles/Home.module.css";
 import Loader from "../components/Loader";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+  Button,
+  CardDeck,
+  Card,
+} from "react-bootstrap";
 
-export default function Home() {
+export default function Home({ movies, actors }) {
   const [loading, setLoading] = useState(true);
   const videoRef = useRef();
 
@@ -118,9 +127,135 @@ export default function Home() {
                 </Row>
               </Container>
             </section>
+            <section className={styles.movies}>
+              <Container>
+                <Row>
+                  <Col>
+                    <h1>
+                      <span>
+                        <span className={styles.quentin_movies}>Movies</span>
+                      </span>
+                    </h1>
+                    <CardDeck>
+                      {movies.slice(0, 8).map((movie) => (
+                        <Col
+                          sm={12}
+                          md={6}
+                          lg={4}
+                          xl={3}
+                          key={movie.id}
+                          className={styles.carddeck}
+                        >
+                          <Card
+                            style={{ width: "15rem" }}
+                            className={styles.card}
+                          >
+                            <Link href="#">
+                              <>
+                                <Card.Img
+                                  variant="top"
+                                  height="275px"
+                                  style={{ objectFit: "cover" }}
+                                  src={
+                                    movie.image
+                                      ? movie.image[0].url
+                                      : "https://via.placeholder.com/150.png"
+                                  }
+                                />
+                              </>
+                            </Link>
+                            <Card.Body className={styles.cardbody}>
+                              <h5>{movie.name}</h5>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      ))}
+                    </CardDeck>
+                  </Col>
+                </Row>
+              </Container>
+              <div className="text-center">
+                <Link href="/movies">
+                  <Button variant="dark">More</Button>
+                </Link>
+              </div>
+            </section>
+
+            <section className={styles.movies}>
+              <Container>
+                <Row>
+                  <Col>
+                    <h1>
+                      <span>
+                        <span className={styles.quentin_movies}>Stars</span>
+                      </span>
+                    </h1>
+                    <CardDeck>
+                      {actors.slice(0, 8).map((star) => (
+                        <Col
+                          sm={12}
+                          md={6}
+                          lg={4}
+                          xl={3}
+                          key={star.id}
+                          className={styles.carddeck}
+                        >
+                          <Card
+                            style={{ width: "15rem" }}
+                            className={styles.card}
+                          >
+                            <Link href="#">
+                              <>
+                                <Card.Img
+                                  variant="top"
+                                  height="275px"
+                                  style={{ objectFit: "cover" }}
+                                  src={
+                                    star.image
+                                      ? star.image.url
+                                      : "https://via.placeholder.com/150.png"
+                                  }
+                                />
+                              </>
+                            </Link>
+                            <Card.Body className={styles.cardbody}>
+                              <h5>{star.name}</h5>
+                            </Card.Body>
+                          </Card>
+                        </Col>
+                      ))}
+                    </CardDeck>
+                  </Col>
+                </Row>
+              </Container>
+              <div className="text-center">
+                <Link href="/actors">
+                  <Button variant="dark">More</Button>
+                </Link>
+              </div>
+            </section>
           </>
         )}
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const movies = await axios
+    .get("https://tarantino-movies-api.herokuapp.com/movies")
+    .then(({ data }) => data)
+    .catch((e) => null);
+
+  const actors = await axios
+    .get("https://tarantino-movies-api.herokuapp.com/actors")
+    .then(({ data }) => data)
+    .catch((e) => null);
+
+  return {
+    props: {
+      movies,
+      actors,
+    },
+  };
 }

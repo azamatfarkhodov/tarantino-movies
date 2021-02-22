@@ -1,0 +1,20 @@
+footer {
+	background-color: #1D1D1D;
+	padding: 1em;
+	color: rgb(236, 231, 231);
+	font-size: 19px;
+	margin: auto;
+	border-top: 1px solid #3B3B3B;
+}
+
+footer a,
+footer a:hover {
+	color: rgb(236, 231, 231);
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+	footer {
+		font-size: 12px;
+	}
+}
