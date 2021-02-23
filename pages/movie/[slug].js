@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import Loader from "../../components/Loader";
 import { Container, Row, Col, Image, Card } from "react-bootstrap";
 import styles from "../../styles/Movie.module.css";
@@ -12,11 +11,6 @@ export default function Movie({ movie }) {
     setLoading(false);
   }, []);
   return (
-    <>
-      <Head>
-        <title>{`Tarantino Movies | ${movie.name}`}</title>
-        <link rel="icon" href="/tarantino.png" />
-      </Head>
       <div className={styles.movie_page}>
         {loading ? (
           <Loader />
@@ -109,7 +103,6 @@ export default function Movie({ movie }) {
           </section>
         )}
       </div>
-    </>
   );
 }
 
