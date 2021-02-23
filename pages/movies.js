@@ -17,7 +17,7 @@ export default function Movies({ movies }) {
     <>
       <Head>
         <title>Tarantino Movies| Movies</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/tarantino.png" />
       </Head>
       <div>
         {loading ? (

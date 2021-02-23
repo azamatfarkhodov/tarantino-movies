@@ -15,6 +15,7 @@ export default function Star({ actor }) {
     <>
       <Head>
         <title>{`Tarantino Movies | ${actor.name}`}</title>
+        <link rel="icon" href="/tarantino.png" />
       </Head>
       <div className={styles.actor_page}>
         {loading ? (

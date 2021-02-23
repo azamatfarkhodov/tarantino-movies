@@ -15,6 +15,7 @@ export default function Movie({ movie }) {
     <>
       <Head>
         <title>{`Tarantino Movies | ${movie.name}`}</title>
+        <link rel="icon" href="/tarantino.png" />
       </Head>
       <div className={styles.movie_page}>
         {loading ? (
