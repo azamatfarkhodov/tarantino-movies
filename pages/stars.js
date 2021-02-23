@@ -55,28 +55,28 @@ export default function Stars({ actors }) {
                           key={star.id}
                           className={styles.carddeck}
                         >
-                          <Card
-                            style={{ width: "15rem" }}
-                            className={styles.card}
-                          >
-                            <Link href="#">
-                              <>
-                                <Card.Img
-                                  variant="top"
-                                  height="275px"
-                                  style={{ objectFit: "cover" }}
-                                  src={
-                                    star.image
-                                      ? star.image.url
-                                      : "https://via.placeholder.com/150.png"
-                                  }
-                                />
-                              </>
-                            </Link>
-                            <Card.Body className={styles.cardbody}>
-                              <h5>{star.name}</h5>
-                            </Card.Body>
-                          </Card>
+                          <Link href={`/actor/${star.slug}`}>
+                            <Card
+                              style={{ width: "15rem" }}
+                              className={styles.card}
+                            >
+                              <Card.Img
+                                variant="top"
+                                height="275px"
+                                style={{ objectFit: "cover" }}
+                                src={
+                                  star.image
+                                    ? star.image.url
+                                    : "https://via.placeholder.com/150.png"
+                                }
+                              />
+                              <Card.Body className={styles.cardbody}>
+                                <Link href={`/actor/${star.slug}`}>
+                                  <h5>{star.name}</h5>
+                                </Link>
+                              </Card.Body>
+                            </Card>
+                          </Link>
                         </Col>
                       ))}
                     </CardDeck>

@@ -1,0 +1,147 @@
+.movie_page {
+	background-color: #1D1D1D;
+}
+
+.carddeck {
+	display: none;
+}
+
+.movie_info h1 {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.movie_info .quentin_span {
+	color: #fff;
+	border-radius: 15px;
+	border-bottom: 15px solid #FFB000;
+	display: inline-block;
+}
+
+.movie_info .quentin_movies {
+	border: none;
+	display: block;
+	margin-bottom: -13px;
+}
+
+.movie_info {
+	margin-top: 150px;
+	margin-bottom: 100px;
+}
+
+.movie_info iframe {
+	margin-top: 100px;
+}
+
+.card {
+	border-radius: 10px;
+	box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+	margin-bottom: 100px;
+}
+
+.card_left {
+	width: 40%;
+	height: 400px;
+	float: left;
+	overflow: hidden;
+	background: transparent;
+}
+
+.card_left img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 10px 0 0 10px;
+	-webkit-border-radius: 10px 0 0 10px;
+	-moz-border-radius: 10px 0 0 10px;
+	position: relative;
+}
+
+.card_right {
+	width: 60%;
+	float: left;
+	background: #000000;
+	height: 400px;
+	border-radius: 0 10px 10px 0;
+	-webkit-border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+}
+
+.card_right h1 {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-align: left;
+	font-size: 40px;
+	margin: 30px 0 0 0;
+	padding: 0 0 0 40px;
+	letter-spacing: 1px;
+}
+
+.card_right_details ul {
+	list-style-type: none;
+	padding: 0 0 0 40px;
+	margin: 10px 0 0 0;
+}
+
+.card_right_details li {
+	display: inline;
+	color: #FFB000;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	padding: 0 40px 0 0;
+}
+
+.card_right_details li .white {
+	color: #fff;
+}
+
+.card_right_review p {
+	color: #fff;
+	margin: 30px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+	.card {
+		display: none;
+	}
+	.carddeck {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: -60px;
+	}
+	.card_mobile {
+		background-color: #1D1D1D;
+		color: #fff;
+	}
+	.cardbody p {
+		color: #FFB000;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+	}
+	.cardbody .white {
+		color: #fff;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.card_left img {
+		height: 100%;
+	}
+	.card_right {
+		height: 368px !important;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.card_left img {
+		height: 368px !important;
+		object-fit: cover;
+	}
+}

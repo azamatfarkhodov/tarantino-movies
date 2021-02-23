@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import '../styles/globals.css'
+import Head from "next/head";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Head>
+      <Head>
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <Footer />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

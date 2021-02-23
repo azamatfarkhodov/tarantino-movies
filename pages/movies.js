@@ -55,28 +55,28 @@ export default function Movies({ movies }) {
                           key={movie.id}
                           className={styles.carddeck}
                         >
-                          <Card
-                            style={{ width: "15rem" }}
-                            className={styles.card}
-                          >
-                            <Link href="#">
-                              <>
-                                <Card.Img
-                                  variant="top"
-                                  height="275px"
-                                  style={{ objectFit: "cover" }}
-                                  src={
-                                    movie.image
-                                      ? movie.image[0].url
-                                      : "https://via.placeholder.com/150.png"
-                                  }
-                                />
-                              </>
-                            </Link>
-                            <Card.Body className={styles.cardbody}>
-                              <h5>{movie.name}</h5>
-                            </Card.Body>
-                          </Card>
+                          <Link href={`/movie/${movie.slug}`}>
+                            <Card
+                              style={{ width: "15rem" }}
+                              className={styles.card}
+                            >
+                              <Card.Img
+                                variant="top"
+                                height="275px"
+                                style={{ objectFit: "cover" }}
+                                src={
+                                  movie.image
+                                    ? movie.image[0].url
+                                    : "https://via.placeholder.com/150.png"
+                                }
+                              />
+                              <Card.Body className={styles.cardbody}>
+                                <Link href={`/movie/${movie.slug}`}>
+                                  <h5>{movie.name}</h5>
+                                </Link>
+                              </Card.Body>
+                            </Card>
+                          </Link>
                         </Col>
                       ))}
                     </CardDeck>
