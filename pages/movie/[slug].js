@@ -82,18 +82,12 @@ export default function Movie({ movie }) {
                       />
                       <Card.Body className={styles.cardbody}>
                         <Card.Text>
-                          <p>
                             <span className={styles.white}>Release Date:</span>{" "}
                             {movie.releaseDate}
-                          </p>
-                          <p>
                             <span className={styles.white}>Budget:</span>{" "}
                             {movie.budget}
-                          </p>
-                          <p>
                             <span className={styles.white}>Box Office:</span>{" "}
                             {movie.boxOffice}
-                          </p>
                         </Card.Text>
                       </Card.Body>
                     </Card>
