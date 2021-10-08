@@ -73,7 +73,7 @@ export default function Home({ movies, actors }) {
                   About{" "}
                   <span>
                     <span className={styles.quentin_tarantino}>
-                      Quentin Tarantno
+                      Quentin Tarantino
                     </span>
                   </span>
                 </h1>
